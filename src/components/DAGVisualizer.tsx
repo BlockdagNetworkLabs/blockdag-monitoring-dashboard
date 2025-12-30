@@ -249,11 +249,10 @@ export function DAGVisualizer({ selectedNode, width = 800, height = 400 }: DAGVi
               const strokeWidth = isVirtualEdge ? 2.5 : 1.5;
               const opacity = isVirtualEdge ? 0.5 : 0.3;
 
-              // Animate edge flow
-              const edgeLength = Math.sqrt(
-                Math.pow(node.x - parent.x, 2) + Math.pow(node.y - parent.y, 2)
-              );
-              const flowOffset = (animationTime * 50) % (edgeLength + 20) - 10;
+              // Animate edge flow (for future use)
+              // const edgeLength = Math.sqrt(
+              //   Math.pow(node.x - parent.x, 2) + Math.pow(node.y - parent.y, 2)
+              // );
 
               return (
                 <g key={`${node.id}-${parentId}`}>
