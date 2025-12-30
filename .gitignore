@@ -27,3 +27,4 @@ dist-ssr
 ._*
 .DS_Store
 
+.vercel
