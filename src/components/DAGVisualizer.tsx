@@ -270,17 +270,19 @@ export function DAGVisualizer({ selectedNode, width = 800, height = 400 }: DAGVi
                   />
                   {/* Animated flow along edge */}
                   {isVirtualEdge && (
-                    <circle
-                      r="3"
-                      fill={strokeColor}
-                      opacity="0.8"
-                    >
-                      <animateMotion
-                        dur="2s"
-                        repeatCount="indefinite"
-                        path={`M ${node.x} ${node.y} L ${parent.x} ${parent.y}`}
-                      />
-                    </circle>
+                    <g>
+                      <circle
+                        r="3"
+                        fill={strokeColor}
+                        opacity="0.8"
+                      >
+                        <animateMotion
+                          dur="2s"
+                          repeatCount="indefinite"
+                          path={`M ${node.x} ${node.y} L ${parent.x} ${parent.y}`}
+                        />
+                      </circle>
+                    </g>
                   )}
                 </g>
               );
