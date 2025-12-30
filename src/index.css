@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-grafana-darker text-grafana-text;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .grafana-card {
+    @apply bg-grafana-dark border border-grafana-border rounded-lg p-4;
+  }
+  
+  .grafana-input {
+    @apply bg-grafana-dark border border-grafana-border rounded px-3 py-1.5 text-grafana-text;
+  }
+  
+  .grafana-button {
+    @apply px-4 py-2 rounded bg-grafana-primary text-white hover:opacity-90 transition-opacity;
+  }
+  
+  .grafana-button-secondary {
+    @apply px-4 py-2 rounded bg-grafana-dark border border-grafana-border text-grafana-text hover:bg-grafana-border transition-colors;
+  }
+}
+
