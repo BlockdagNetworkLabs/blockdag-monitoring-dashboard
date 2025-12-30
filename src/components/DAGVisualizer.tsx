@@ -346,18 +346,20 @@ export function DAGVisualizer({ selectedNode, width = 800, height = 400 }: DAGVi
                   )}
                   {/* Entrance animation for new blocks */}
                   {isNew && (
-                    <animate
-                      attributeName="r"
-                      values="0;12;7"
-                      dur="0.6s"
-                      fill="freeze"
-                    />
-                    <animate
-                      attributeName="opacity"
-                      values="0;1;1"
-                      dur="0.6s"
-                      fill="freeze"
-                    />
+                    <>
+                      <animate
+                        attributeName="r"
+                        values="0;12;7"
+                        dur="0.6s"
+                        fill="freeze"
+                      />
+                      <animate
+                        attributeName="opacity"
+                        values="0;1;1"
+                        dur="0.6s"
+                        fill="freeze"
+                      />
+                    </>
                   )}
                 </circle>
 
