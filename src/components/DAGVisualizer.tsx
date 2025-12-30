@@ -259,15 +259,13 @@ export function DAGVisualizer({ selectedNode, width = 1000, height = 500 }: DAGV
                   />
                   {/* Animated flow for virtual chain */}
                   {isVirtualEdge && (
-                    <g>
-                      <circle r="2" fill={strokeColor} opacity="0.9">
-                        <animateMotion
-                          dur="3s"
-                          repeatCount="indefinite"
-                          path={`M ${node.x} ${node.y} L ${parent.x} ${parent.y}`}
-                        />
-                      </circle>
-                    </g>
+                    <circle r="2" fill={strokeColor} opacity="0.9">
+                      <animateMotion
+                        dur="3s"
+                        repeatCount="indefinite"
+                        path={`M ${node.x} ${node.y} L ${parent.x} ${parent.y}`}
+                      />
+                    </circle>
                   )}
                 </g>
               );
