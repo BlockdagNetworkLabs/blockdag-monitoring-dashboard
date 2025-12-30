@@ -14,7 +14,7 @@
     "test:coverage": "vitest --coverage",
     "prebuild": "npm run test",
     "prepublishOnly": "npm run test",
-    "prepare": "husky install || true"
+    "prepare": "node -e \"try { require('fs').statSync('.git'); require('child_process').execSync('husky install', {stdio: 'ignore'}); } catch(e) {}\""
   },
   "dependencies": {
     "react": "^18.2.0",
