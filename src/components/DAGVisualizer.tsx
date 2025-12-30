@@ -68,8 +68,6 @@ export function DAGVisualizer({ selectedNode, width = 1000, height = 500 }: DAGV
       const numLayers = 12;
       const baseNodesPerLayer = Math.max(5, Math.ceil(dagWidth * 2));
       const layerHeight = height / (numLayers + 2);
-      const baseNodeWidth = 35;
-      const baseNodeHeight = 20;
       const horizontalSpacing = 50;
 
       const existingNodeIds = new Set(nodes.map(n => n.id));
