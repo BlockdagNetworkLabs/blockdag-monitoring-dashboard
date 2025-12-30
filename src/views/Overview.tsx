@@ -4,6 +4,7 @@ import { TimeRange } from '../types/metrics';
 import { KPICard } from '../components/KPICard';
 import { TimeSeriesChart } from '../components/TimeSeriesChart';
 import { AlertPanel } from '../components/AlertPanel';
+import { DAGVisualizer } from '../components/DAGVisualizer';
 import { evaluateAlerts } from '../alerts/alertRules';
 import { Alert } from '../types/alerts';
 import { formatBytes, formatDuration, formatNumber } from '../utils/formatting';
@@ -143,6 +144,8 @@ export function Overview({ selectedNode, timeRange }: OverviewProps) {
       </div>
 
       <AlertPanel alerts={alerts} />
+
+      <DAGVisualizer selectedNode={selectedNode} />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <TimeSeriesChart
