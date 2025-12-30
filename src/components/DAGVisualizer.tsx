@@ -331,18 +331,20 @@ export function DAGVisualizer({ selectedNode, width = 1000, height = 500 }: DAGV
                 >
                   {/* Pulse animation for tips */}
                   {node.isTip && (
-                    <animate
-                      attributeName="width"
-                      values={`${nodeWidth};${nodeWidth + 3};${nodeWidth}`}
-                      dur="1.5s"
-                      repeatCount="indefinite"
-                    />
-                    <animate
-                      attributeName="height"
-                      values={`${nodeHeight};${nodeHeight + 2};${nodeHeight}`}
-                      dur="1.5s"
-                      repeatCount="indefinite"
-                    />
+                    <>
+                      <animate
+                        attributeName="width"
+                        values={`${nodeWidth};${nodeWidth + 3};${nodeWidth}`}
+                        dur="1.5s"
+                        repeatCount="indefinite"
+                      />
+                      <animate
+                        attributeName="height"
+                        values={`${nodeHeight};${nodeHeight + 2};${nodeHeight}`}
+                        dur="1.5s"
+                        repeatCount="indefinite"
+                      />
+                    </>
                   )}
                   {/* Entrance animation for new blocks */}
                   {isNew && (
